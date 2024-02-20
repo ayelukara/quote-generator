@@ -17,8 +17,10 @@ function loading() {
 
 // Hide Loading
 function complete() {
-    quoteContainer.hidden = false;
+    if (!loader.hidden) {
+        quoteContainer.hidden = false;
     loader.hidden = true;
+    }
 }
 
 // Get Quote From API
